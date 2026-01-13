@@ -10,6 +10,27 @@ function onLoad() {
     themeSelector.value = localStorage.getItem('theme');
     toggleTheme();
   }
+  
+  // Listen for orientation changes to update background image
+  window.addEventListener('orientationchange', function() {
+    // Wait a bit for orientation to settle
+    setTimeout(function() {
+      if (localStorage.getItem('theme') != null) {
+        toggleTheme();
+      }
+    }, 100);
+  });
+  
+  // Also listen for window resize (handles cases where orientationchange doesn't fire)
+  window.addEventListener('resize', function() {
+    // Debounce resize events
+    clearTimeout(window.resizeTimeout);
+    window.resizeTimeout = setTimeout(function() {
+      if (localStorage.getItem('theme') != null) {
+        toggleTheme();
+      }
+    }, 250);
+  });
 }
 
 function toggleTheme() {
@@ -18,20 +39,43 @@ function toggleTheme() {
   localStorage.setItem('theme', themeName);
   var htmlElement = document.getElementsByTagName('html')[0];
   var bodyElement = document.getElementsByTagName('body')[0];
-  changeTheme(htmlElement, bodyElement, themeMap[themeName]);
+  changeTheme(htmlElement, bodyElement, themeMap[themeName], themeName);
 }
 
-function changeTheme(htmlElement, bodyElement, theme) {
+// Helper function to check if device is mobile in portrait orientation
+function isMobilePortrait() {
+  var width = window.innerWidth || document.documentElement.clientWidth;
+  var height = window.innerHeight || document.documentElement.clientHeight;
+  // Check if mobile (width < 768px) AND portrait (height > width)
+  return width < 768 && height > width;
+}
+
+// Helper function to check if we're on About or Blog page
+function isAboutOrBlogPage() {
+  var pathname = window.location.pathname;
+  return pathname.includes('/about/') || pathname.includes('/blog/');
+}
+
+function changeTheme(htmlElement, bodyElement, theme, themeName) {
   // Set CSS custom properties on html element
   htmlElement.style.setProperty("--primary-background-color", theme['background-color']);
   htmlElement.style.setProperty("--primary-text-color", theme['text-color']);
   htmlElement.style.setProperty("--primary-highlight-color", theme['highlight-color']);
   
   // Apply background-image and other background properties directly to body element
-  if (theme['background-image']) {
+  // Hide background image on mobile portrait orientation
+  if (theme['background-image'] && !isMobilePortrait()) {
+    // Check if we need to override the background image for specific pages
+    var backgroundImage = theme['background-image'];
+    
+    // Override background image for sepia-light theme on About/Blog pages
+    if (themeName === 'sepia-light' && isAboutOrBlogPage()) {
+      backgroundImage = 'Sides_SepiaLight.jpg';
+    }
+    
     // Try to construct the correct path
     // First, try absolute path from root
-    var imagePath = '/my_site/images/' + theme['background-image'];
+    var imagePath = '/my_site/images/' + backgroundImage;
     
     // If we're on GitHub Pages with a repo name, we might need to adjust
     // Check if there's a base tag or if we can detect the base path
@@ -86,6 +130,15 @@ function changeTheme(htmlElement, bodyElement, theme) {
     // Verify it was set
     console.log('Applied styles - backgroundImage:', bodyElement.style.backgroundImage);
     console.log('Computed background-image:', window.getComputedStyle(bodyElement).backgroundImage);
+  } else if (theme['background-image'] && isMobilePortrait()) {
+    // Theme has background image but we're on mobile portrait - use background color only
+    bodyElement.style.backgroundImage = 'none';
+    bodyElement.style.backgroundSize = '';
+    bodyElement.style.backgroundPosition = '';
+    bodyElement.style.backgroundRepeat = '';
+    bodyElement.style.backgroundAttachment = '';
+    bodyElement.style.removeProperty('background-color');
+    console.log('Mobile portrait detected - background image hidden');
   } else {
     // No background image, so use the background color from CSS variable
     bodyElement.style.backgroundImage = 'none';
