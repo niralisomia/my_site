@@ -1,5 +1,5 @@
 ---
 layout: home
-home_text: Hey, I think you stole my dog - John Wick
-title: Rohit Jain
+home_text: I am currently a PhD student in Medical Engineering and Medical Physics through Health Sciences and Technology (HST) at Harvard and MIT
+title: Nirali Somia
 ---
