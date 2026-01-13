@@ -2,6 +2,7 @@ const themeMap = {
   'default-light': {
     'background-color': 'white',
     'text-color': '#222',
+    'background-image': 'url("../../images/test.jpg")',
     'highlight-color': '#eee'
   },
   'default-dark': {
