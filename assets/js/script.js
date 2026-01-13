@@ -42,7 +42,7 @@ function changeTheme(htmlElement, bodyElement, theme) {
     if (baseHref && baseHref !== '/' && baseHref !== '') {
       // Remove trailing slash if present
       var base = baseHref.replace(/\/$/, '');
-      imagePath = base + '/images/' + theme['background-image'];
+      imagePath = base + '/my_site/images/' + theme['background-image'];
     }
     
     var backgroundImageUrl = 'url("' + imagePath + '")';
@@ -93,6 +93,8 @@ function changeTheme(htmlElement, bodyElement, theme) {
     bodyElement.style.backgroundPosition = '';
     bodyElement.style.backgroundRepeat = '';
     bodyElement.style.backgroundAttachment = '';
+    // Remove the transparent background-color so the CSS variable can work
+    bodyElement.style.removeProperty('background-color');
   }
 }
 
