@@ -52,6 +52,18 @@ function changeTheme(htmlElement, bodyElement, theme) {
     console.log('Image path:', imagePath);
     console.log('Base href:', baseHref);
     console.log('Current pathname:', window.location.pathname);
+    console.log('Full URL would be:', window.location.origin + imagePath);
+    
+    // Test if image exists by trying to load it
+    var testImg = new Image();
+    testImg.onload = function() {
+      console.log('✓ Image loaded successfully:', imagePath);
+    };
+    testImg.onerror = function() {
+      console.error('✗ Image failed to load:', imagePath);
+      console.error('Tried to load from:', window.location.origin + imagePath);
+    };
+    testImg.src = imagePath;
     
     // Set all background properties using direct style assignment (more reliable than setProperty)
     // Use CSS background shorthand to ensure everything is set together
@@ -60,16 +72,20 @@ function changeTheme(htmlElement, bodyElement, theme) {
     var bgRepeat = theme['background-repeat'] || 'no-repeat';
     var bgAttachment = theme['background-attachment'] || 'fixed';
     
-    // Set individual properties
-    bodyElement.style.backgroundImage = backgroundImageUrl;
-    bodyElement.style.backgroundSize = bgSize;
-    bodyElement.style.backgroundPosition = bgPosition;
-    bodyElement.style.backgroundRepeat = bgRepeat;
-    bodyElement.style.backgroundAttachment = bgAttachment;
+    // Set individual properties with !important to override CSS
+    bodyElement.style.setProperty('background-image', backgroundImageUrl, 'important');
+    bodyElement.style.setProperty('background-size', bgSize, 'important');
+    bodyElement.style.setProperty('background-position', bgPosition, 'important');
+    bodyElement.style.setProperty('background-repeat', bgRepeat, 'important');
+    bodyElement.style.setProperty('background-attachment', bgAttachment, 'important');
     
-    // Ensure background-color doesn't interfere - set it to the theme color but image should show on top
-    // The background-image will render on top of background-color in CSS
-    bodyElement.style.backgroundColor = theme['background-color'] || 'transparent';
+    // Set background-color to transparent so image shows through
+    // The CSS has background-color: var(--primary-background-color) which might be covering the image
+    bodyElement.style.setProperty('background-color', 'transparent', 'important');
+    
+    // Verify it was set
+    console.log('Applied styles - backgroundImage:', bodyElement.style.backgroundImage);
+    console.log('Computed background-image:', window.getComputedStyle(bodyElement).backgroundImage);
   } else {
     // No background image, so use the background color from CSS variable
     bodyElement.style.backgroundImage = 'none';
