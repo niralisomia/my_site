@@ -28,33 +28,42 @@ function changeTheme(htmlElement, bodyElement, theme) {
   
   // Apply background-image and other background properties directly to body element
   if (theme['background-image']) {
-    bodyElement.style.setProperty("background-image", theme['background-image']);
+    // Set all background properties - use inline styles which have high specificity
+    bodyElement.style.backgroundImage = theme['background-image'];
+    // Make background-color transparent so image shows through
+    bodyElement.style.backgroundColor = 'transparent';
+    
+    if (theme['background-size']) {
+      bodyElement.style.backgroundSize = theme['background-size'];
+    } else {
+      bodyElement.style.backgroundSize = '';
+    }
+    
+    if (theme['background-position']) {
+      bodyElement.style.backgroundPosition = theme['background-position'];
+    } else {
+      bodyElement.style.backgroundPosition = '';
+    }
+    
+    if (theme['background-repeat']) {
+      bodyElement.style.backgroundRepeat = theme['background-repeat'];
+    } else {
+      bodyElement.style.backgroundRepeat = '';
+    }
+    
+    if (theme['background-attachment']) {
+      bodyElement.style.backgroundAttachment = theme['background-attachment'];
+    } else {
+      bodyElement.style.backgroundAttachment = '';
+    }
   } else {
-    bodyElement.style.setProperty("background-image", "none");
-  }
-  
-  if (theme['background-size']) {
-    bodyElement.style.setProperty("background-size", theme['background-size']);
-  } else {
-    bodyElement.style.removeProperty("background-size");
-  }
-  
-  if (theme['background-position']) {
-    bodyElement.style.setProperty("background-position", theme['background-position']);
-  } else {
-    bodyElement.style.removeProperty("background-position");
-  }
-  
-  if (theme['background-repeat']) {
-    bodyElement.style.setProperty("background-repeat", theme['background-repeat']);
-  } else {
-    bodyElement.style.removeProperty("background-repeat");
-  }
-  
-  if (theme['background-attachment']) {
-    bodyElement.style.setProperty("background-attachment", theme['background-attachment']);
-  } else {
-    bodyElement.style.removeProperty("background-attachment");
+    // No background image, so use the background color from CSS variable
+    bodyElement.style.backgroundImage = 'none';
+    bodyElement.style.backgroundColor = '';
+    bodyElement.style.backgroundSize = '';
+    bodyElement.style.backgroundPosition = '';
+    bodyElement.style.backgroundRepeat = '';
+    bodyElement.style.backgroundAttachment = '';
   }
 }
 
