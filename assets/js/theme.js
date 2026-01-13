@@ -1,7 +1,7 @@
 const themeMap = {
   'default-light': {
     'background-color': 'white',
-    'background-image': 'url("/images/test.jpg")',
+    'background-image': 'test.jpg',  // Store just the filename
     'background-size': 'cover',        // or 'contain', '100% 100%', etc.
     'background-position': 'center',   // or 'top', 'bottom', etc.
     'background-repeat': 'no-repeat',  // or 'repeat', 'repeat-x', etc.
@@ -26,7 +26,7 @@ const themeMap = {
   },
   'sepia-light': {
     'background-color': '#f4ecd8',
-    'background-image': 'url("/images/Background_SepiaLight.jpg")',
+    'background-image': 'Background_SepiaLight.jpg',  // Store just the filename
     'background-size': 'cover',        // or 'contain', '100% 100%', etc.
     'background-position': 'center',   // or 'top', 'bottom', etc.
     'background-repeat': 'no-repeat',  // or 'repeat', 'repeat-x', etc.

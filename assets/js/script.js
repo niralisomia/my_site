@@ -13,6 +13,7 @@ function onLoad() {
 }
 
 function toggleTheme() {
+  var themeSelector = document.getElementById('themeSelector');
   var themeName = themeSelector.value;
   localStorage.setItem('theme', themeName);
   var htmlElement = document.getElementsByTagName('html')[0];
@@ -28,38 +29,50 @@ function changeTheme(htmlElement, bodyElement, theme) {
   
   // Apply background-image and other background properties directly to body element
   if (theme['background-image']) {
-    // Set all background properties - use inline styles which have high specificity
-    bodyElement.style.backgroundImage = theme['background-image'];
-    // Make background-color transparent so image shows through
-    bodyElement.style.backgroundColor = 'transparent';
+    // Try to construct the correct path
+    // First, try absolute path from root
+    var imagePath = '/images/' + theme['background-image'];
     
-    if (theme['background-size']) {
-      bodyElement.style.backgroundSize = theme['background-size'];
-    } else {
-      bodyElement.style.backgroundSize = '';
+    // If we're on GitHub Pages with a repo name, we might need to adjust
+    // Check if there's a base tag or if we can detect the base path
+    var baseTag = document.querySelector('base');
+    var baseHref = baseTag ? baseTag.getAttribute('href') : '';
+    
+    // If there's a base href that's not just '/', use it
+    if (baseHref && baseHref !== '/' && baseHref !== '') {
+      // Remove trailing slash if present
+      var base = baseHref.replace(/\/$/, '');
+      imagePath = base + '/images/' + theme['background-image'];
     }
     
-    if (theme['background-position']) {
-      bodyElement.style.backgroundPosition = theme['background-position'];
-    } else {
-      bodyElement.style.backgroundPosition = '';
-    }
+    var backgroundImageUrl = 'url("' + imagePath + '")';
     
-    if (theme['background-repeat']) {
-      bodyElement.style.backgroundRepeat = theme['background-repeat'];
-    } else {
-      bodyElement.style.backgroundRepeat = '';
-    }
+    // Debug: log the path being used
+    console.log('Setting background image to:', backgroundImageUrl);
+    console.log('Image path:', imagePath);
+    console.log('Base href:', baseHref);
+    console.log('Current pathname:', window.location.pathname);
     
-    if (theme['background-attachment']) {
-      bodyElement.style.backgroundAttachment = theme['background-attachment'];
-    } else {
-      bodyElement.style.backgroundAttachment = '';
-    }
+    // Set all background properties using direct style assignment (more reliable than setProperty)
+    // Use CSS background shorthand to ensure everything is set together
+    var bgSize = theme['background-size'] || 'cover';
+    var bgPosition = theme['background-position'] || 'center';
+    var bgRepeat = theme['background-repeat'] || 'no-repeat';
+    var bgAttachment = theme['background-attachment'] || 'fixed';
+    
+    // Set individual properties
+    bodyElement.style.backgroundImage = backgroundImageUrl;
+    bodyElement.style.backgroundSize = bgSize;
+    bodyElement.style.backgroundPosition = bgPosition;
+    bodyElement.style.backgroundRepeat = bgRepeat;
+    bodyElement.style.backgroundAttachment = bgAttachment;
+    
+    // Ensure background-color doesn't interfere - set it to the theme color but image should show on top
+    // The background-image will render on top of background-color in CSS
+    bodyElement.style.backgroundColor = theme['background-color'] || 'transparent';
   } else {
     // No background image, so use the background color from CSS variable
     bodyElement.style.backgroundImage = 'none';
-    bodyElement.style.backgroundColor = '';
     bodyElement.style.backgroundSize = '';
     bodyElement.style.backgroundPosition = '';
     bodyElement.style.backgroundRepeat = '';
