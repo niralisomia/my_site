@@ -31,7 +31,7 @@ function changeTheme(htmlElement, bodyElement, theme) {
   if (theme['background-image']) {
     // Try to construct the correct path
     // First, try absolute path from root
-    var imagePath = '/images/' + theme['background-image'];
+    var imagePath = '/my_site/images/' + theme['background-image'];
     
     // If we're on GitHub Pages with a repo name, we might need to adjust
     // Check if there's a base tag or if we can detect the base path
