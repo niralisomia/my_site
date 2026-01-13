@@ -8,7 +8,7 @@ through Health Sciences and Technology (HST) at Harvard and MIT. I'm currently i
 the medical field. 
 
 Before I started my PhD program I received my B.S. in computer science from Washington University in St. Louis and was
-a NIH funded PREP scholar at Cold Spring Harbor Laboratory in Peter Koo's lab.
+a NIH funded PREP scholar at Cold Spring Harbor Laboratory in Peter Koo's lab. yay!
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
