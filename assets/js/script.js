@@ -53,7 +53,7 @@ function isMobilePortrait() {
 // Helper function to check if we're on About or Blog page
 function isAboutOrBlogPage() {
   var pathname = window.location.pathname;
-  return pathname.includes('/about/') || pathname.includes('/blog/');
+  return pathname.includes('/about/') || pathname.includes('/blog/') || pathname.includes('/concepts/');
 }
 
 function changeTheme(htmlElement, bodyElement, theme, themeName) {
