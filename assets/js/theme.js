@@ -1,8 +1,12 @@
 const themeMap = {
   'default-light': {
     'background-color': 'white',
-    'text-color': '#222',
     'background-image': 'url("../../images/test.jpg")',
+    'background-size': 'cover',        // or 'contain', '100% 100%', etc.
+    'background-position': 'center',   // or 'top', 'bottom', etc.
+    'background-repeat': 'no-repeat',  // or 'repeat', 'repeat-x', etc.
+    'background-attachment': 'fixed',  // or 'scroll'
+    'text-color': '#222',
     'highlight-color': '#eee'
   },
   'default-dark': {
