@@ -218,13 +218,7 @@ body {
 }
 
 #themeSelector {
-  position: fixed;
-  top: 5px;
-  right: 5px;
-  background: var(--primary-background-color);
-  color: var(--primary-text-color);
-  border-radius: 5px;
-  border: 0;
+  display: none !important;
 }
 .post-footer {
   margin-top: 50px;
