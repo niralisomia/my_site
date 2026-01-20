@@ -155,3 +155,13 @@ disqus:
   # Leave shortname blank to disable comments site-wide.
   # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
   shortname: my_disqus_shortname
+
+############################################################
+# Default permalink structure for posts
+# All posts will have /blog/ in their URL
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: /blog/:year/:month/:day/:title/
