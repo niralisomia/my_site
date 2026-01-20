@@ -10,6 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+          bundler-cache: true
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
       - uses: actions/cache@v3
         with:
           path: vendor/bundle
@@ -21,5 +30,7 @@ jobs:
           provider: 'github'
           token: ${{ secrets.GITHUB_TOKEN }}
           jekyll_baseurl: 'dev-portfolio-blog'
-          pre_build_commands: pacman -S --noconfirm nodejs npm
-          branch: 'sample-site'
+          pre_build_commands: |
+            pacman -S --noconfirm ruby ruby-bundler nodejs npm
+          branch: 'master'
+          timeout: '20m'
