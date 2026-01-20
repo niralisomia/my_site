@@ -1,6 +1,7 @@
 resume_url: "Nirali_Somia_Resume.pdf"
 author_name: "Nirali :)"
 url: johndoe.com
+baseurl: "/my_site"
 
 plugins:
   - jekyll-seo-tag

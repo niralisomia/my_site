@@ -14,7 +14,7 @@ permalink: /about/
 
     <p>I mostly started this website to practice making difficult concepts more accessible by writing blogs about them. You can find some of those posts <a href="https://niralisomia.github.io/my_site/blog/"><u>here</u></a>.</p>
 
-    <p>Outide of science I like to read fiction and poetry, crochet, rock climb, and listen to sad indie music like <a href="https://www.youtube.com/watch?v=vt0J3IEYkIg&list=RDvt0J3IEYkIg&start_radio=1"><u>The Beths</u></a>! :)</p>
+    <p>Outide of science I like to read fiction and poetry, crochet, rock climb, and listen to sad indie bands like <a href="https://www.youtube.com/watch?v=vt0J3IEYkIg&list=RDvt0J3IEYkIg&start_radio=1"><u>The Beths</u></a>! :)</p>
 
   </div>
 </div>

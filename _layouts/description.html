@@ -6,7 +6,7 @@ layout: default
         <h1>
             {% if page.title == "About" or page.permalink == "/about/" %}
                 About Me
-            {% elsif page.title contains "Blog" or page.permalink == "/blog/" or page.pagetype == "blog" %}
+            {% elsif page.date or page.title contains "Blog" or page.permalink == "/blog/" or page.pagetype == "blog" or page.permalink contains "/blog/" %}
                 Blog
             {% elsif page.title %}
                 {{ page.title }}
