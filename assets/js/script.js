@@ -1,23 +1,12 @@
 function onLoad() {
-  var themeSelector = document.getElementById('themeSelector');
-  for (var themeName in themeMap) {
-    var opt = document.createElement('option');
-    opt.value = themeName;
-    opt.innerHTML = capitalizeFirstLetter(themeName);
-    themeSelector.appendChild(opt);
-  }
-  if (localStorage.getItem('theme') != null) {
-    themeSelector.value = localStorage.getItem('theme');
-    toggleTheme();
-  }
+  // Always apply sepia-light theme
+  applySepiaLightTheme();
   
   // Listen for orientation changes to update background image
   window.addEventListener('orientationchange', function() {
     // Wait a bit for orientation to settle
     setTimeout(function() {
-      if (localStorage.getItem('theme') != null) {
-        toggleTheme();
-      }
+      applySepiaLightTheme();
     }, 100);
   });
   
@@ -26,20 +15,15 @@ function onLoad() {
     // Debounce resize events
     clearTimeout(window.resizeTimeout);
     window.resizeTimeout = setTimeout(function() {
-      if (localStorage.getItem('theme') != null) {
-        toggleTheme();
-      }
+      applySepiaLightTheme();
     }, 250);
   });
 }
 
-function toggleTheme() {
-  var themeSelector = document.getElementById('themeSelector');
-  var themeName = themeSelector.value;
-  localStorage.setItem('theme', themeName);
+function applySepiaLightTheme() {
   var htmlElement = document.getElementsByTagName('html')[0];
   var bodyElement = document.getElementsByTagName('body')[0];
-  changeTheme(htmlElement, bodyElement, themeMap[themeName], themeName);
+  changeTheme(htmlElement, bodyElement, themeMap['sepia-light'], 'sepia-light');
 }
 
 // Helper function to check if device is mobile in portrait orientation
@@ -53,7 +37,7 @@ function isMobilePortrait() {
 // Helper function to check if we're on About or Blog page
 function isAboutOrBlogPage() {
   var pathname = window.location.pathname;
-  return pathname.includes('/about/') || pathname.includes('/blog/') || pathname.includes('/concepts/');
+  return pathname.includes('/about/') || pathname.includes('/blog/') || pathname.includes('/concepts/') || pathname.includes('/categories/') ;
 }
 
 function changeTheme(htmlElement, bodyElement, theme, themeName) {
