@@ -8,12 +8,14 @@ permalink: /about/
     <img src="{{ '/images/profile_image.jpg' | relative_url }}" alt="Nirali Somia">
   </div>
   <div class="profile-text">
-    <p>My name is Nirali Somia and I'm currently a PhD student in the Medical Engineering and Medical Physics (MEMP) program
-    through Health Sciences and Technology (HST) at Harvard and MIT. I'm currently interested in AI explainability in
-    the medical field.</p>
-    
-    <p>Before I started my PhD program I received my B.S. in computer science from Washington University in St. Louis and was
-    a NIH funded PREP scholar at Cold Spring Harbor Laboratory in Peter Koo's lab. yay!</p>
+    <p>My name is Nirali Somia and I'm currently a first year PhD student in the Medical Engineering and Medical Physics (<a href="https://hst.mit.edu/academic-programs/memp"><u>MEMP</u></a>) program through Health Sciences and Technology (HST) at Harvard and MIT. I'm currently interested in AI explainability in the medical field.</p>
+
+    <p>Before I started my PhD program I received my B.S. in computer science from Washington University in St. Louis and was a NIH funded PREP scholar at Cold Spring Harbor Laboratory in <a href="https://koo-lab.github.io/"><u>Peter Koo's</u></a> lab.</p>
+
+    <p>I mostly started this website to practice making difficult concepts more accessible by writing blogs about them. You can find some of those posts <a href="https://niralisomia.github.io/my_site/blog/"><u>here</u></a>.</p>
+
+    <p>Outide of science I like to read fiction and poetry, crochet, rock climb, and listen to sad indie music like <a href="https://www.youtube.com/watch?v=vt0J3IEYkIg&list=RDvt0J3IEYkIg&start_radio=1"><u>The Beths</u></a>! :)</p>
+
   </div>
 </div>
 

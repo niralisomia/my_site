@@ -1,20 +1,34 @@
 ---
-layout: description
+layout: default
 ---
-<div id="archives">
-  <div class="archive-group">
-    <h3 class="category-head">{{ page.category }}</h3>
-    {% assign public_posts = site.categories[page.category] | where_exp: "post", "post.private != true" %}
-    {% if public_posts.size == 0 %}
-      <p>No posts in this category yet.</p>
-    {% else %}
-      {% for post in public_posts %}
-      <article class="archive-item">
-        <a class="blog-heading" href="{{ post.url | relative_url }}">{{post.title}}</a><span class="date"> - {{ post.date | date_to_string }}</span>
-        <div class="excerpt">{{ post.excerpt }}</div>
-      </article>
-      <br>
-      {% endfor %}
-    {% endif %}
-  </div>
+<div class="mid-section-cover">
+    <nav>
+        <h1>
+            {% if page.title %}
+                {{ page.title }}
+            {% else %}
+                {{ page.category }}
+            {% endif %}
+        </h1>
+        {% include navigation.html %}
+    </nav>
+    <main class="sub-mid-section-cover">
+        {% assign public_posts = site.categories[page.category] | where_exp: "post", "post.private != true" %}
+        {% if public_posts.size == 0 %}
+            <p>No posts in this category yet.</p>
+        {% else %}
+        <div id="archives">
+          <div class="archive-group">
+            <h3 class="category-head">{{ page.category }}</h3>
+            {% for post in public_posts %}
+            <article class="archive-item">
+              <a class="blog-heading" href="{{ post.url | relative_url }}">{{post.title}}</a><span class="date"> - {{ post.date | date_to_string }}</span>
+              <div class="excerpt">{{ post.excerpt }}</div>
+            </article>
+            <br>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+    </main>
 </div>

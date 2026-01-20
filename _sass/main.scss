@@ -276,6 +276,7 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 30px;
+    margin-top: 30px;
     margin-bottom: 30px;
     @include mediaQuery(tablet-width) {
       flex-direction: column;

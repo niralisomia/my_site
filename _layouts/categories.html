@@ -7,10 +7,11 @@ title: Categories
 
 <div id="archives">
 {% for category in site.categories %}
+  {% capture category_name %}{{ category | first }}{% endcapture %}
+  {% assign public_posts = site.categories[category_name] | where_exp: "post", "post.private != true" %}
+  {% if public_posts.size > 0 %}
   <div class="archive-group">
-    {% capture category_name %}{{ category | first }}{% endcapture %}
     <h3 class="category-head"><a href="{{ "/categories/" | append: category_name | slugize | append: "/" | relative_url }}">{{ category_name }}</a></h3>
-    {% assign public_posts = site.categories[category_name] | where_exp: "post", "post.private != true" %}
     {% for post in public_posts %}
     <article class="archive-item">
       &nbsp;&nbsp;<a href="{{ post.url | relative_url }}">{{post.title}} - {{ post.date | date_to_string }}</a>
@@ -18,5 +19,6 @@ title: Categories
     <br>
     {% endfor %}
   </div>
+  {% endif %}
 {% endfor %}
 </div>
