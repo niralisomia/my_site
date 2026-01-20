@@ -3,12 +3,21 @@ layout: description
 title: About
 permalink: /about/
 ---
-My name is Nirali Somia and I'm currently a PhD student in the Medical Engineering and Medical Physics (MEMP) program
-through Health Sciences and Technology (HST) at Harvard and MIT. I'm currently interested in AI explainability in
-the medical field. 
+<div class="about-profile-container">
+  <div class="profile-image-wrapper">
+    <img src="{{ '/images/profile_image.jpg' | relative_url }}" alt="Nirali Somia">
+  </div>
+  <div class="profile-text">
+    <p>My name is Nirali Somia and I'm currently a PhD student in the Medical Engineering and Medical Physics (MEMP) program
+    through Health Sciences and Technology (HST) at Harvard and MIT. I'm currently interested in AI explainability in
+    the medical field.</p>
+    
+    <p>Before I started my PhD program I received my B.S. in computer science from Washington University in St. Louis and was
+    a NIH funded PREP scholar at Cold Spring Harbor Laboratory in Peter Koo's lab. yay!</p>
+  </div>
+</div>
 
-Before I started my PhD program I received my B.S. in computer science from Washington University in St. Louis and was
-a NIH funded PREP scholar at Cold Spring Harbor Laboratory in Peter Koo's lab. yay!
+<!--
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
@@ -131,3 +140,5 @@ The final element.
 ```
 
 ## Emojis
+
+-->

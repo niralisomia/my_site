@@ -28,11 +28,13 @@ layout: default
             {% capture category_name %}{{ category | first }}{% endcapture %}
             <h3 class="category-head"><a href="{{ "/categories/" | append: category_name | slugize | append: "/" | relative_url }}">{{ category_name }}</a></h3>
             {% for post in site.categories[category_name] %}
+              {% unless post.private %}
             <article class="archive-item">
               <a class="blog-heading" href="{{ post.url | relative_url }}">{{post.title}}</a><span class="date"> - {{ post.date | date_to_string }}</span>
               <div class="excerpt">{{ post.excerpt }}</div>
             </article>
             <br>
+              {% endunless %}
             {% endfor %}
           </div>
         {% endfor %}

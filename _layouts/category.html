@@ -4,10 +4,11 @@ layout: description
 <div id="archives">
   <div class="archive-group">
     <h3 class="category-head">{{ page.category }}</h3>
-    {% if site.categories[page.category].size == 0 %}
+    {% assign public_posts = site.categories[page.category] | where_exp: "post", "post.private != true" %}
+    {% if public_posts.size == 0 %}
       <p>No posts in this category yet.</p>
     {% else %}
-      {% for post in site.categories[page.category] %}
+      {% for post in public_posts %}
       <article class="archive-item">
         <a class="blog-heading" href="{{ post.url | relative_url }}">{{post.title}}</a><span class="date"> - {{ post.date | date_to_string }}</span>
         <div class="excerpt">{{ post.excerpt }}</div>
