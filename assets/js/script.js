@@ -59,7 +59,7 @@ function changeTheme(htmlElement, bodyElement, theme, themeName) {
     
     // Try to construct the correct path
     // First, try absolute path from root
-    var imagePath = '/my_site/images/' + backgroundImage;
+    var imagePath = '/images/' + backgroundImage;
     
     // If we're on GitHub Pages with a repo name, we might need to adjust
     // Check if there's a base tag or if we can detect the base path
@@ -70,7 +70,7 @@ function changeTheme(htmlElement, bodyElement, theme, themeName) {
     if (baseHref && baseHref !== '/' && baseHref !== '') {
       // Remove trailing slash if present
       var base = baseHref.replace(/\/$/, '');
-      imagePath = base + '/my_site/images/' + theme['background-image'];
+      imagePath = base + '/images/' + theme['background-image'];
     }
     
     var backgroundImageUrl = 'url("' + imagePath + '")';
