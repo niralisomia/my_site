@@ -29,7 +29,7 @@ jobs:
         with:
           provider: 'github'
           token: ${{ secrets.GITHUB_TOKEN }}
-          jekyll_baseurl: 'dev-portfolio-blog'
+          jekyll_baseurl: ''
           pre_build_commands: |
             pacman -S --noconfirm ruby ruby-bundler nodejs npm
           branch: 'master'
