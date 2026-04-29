@@ -23,6 +23,21 @@ body {
   transition: background 0.1s ease-in, color 0.1s ease-in;
   // font-size: 120%;
 }
+/* Full-viewport doodle layer on the home page; pointer-events none keeps links clickable. */
+.landing-draw-canvas {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+@media (pointer: fine) and (hover: hover) {
+  .landing-draw-canvas {
+    display: block;
+  }
+}
+
 .mid-section-home {
   text-align: center;
   display: flex;
