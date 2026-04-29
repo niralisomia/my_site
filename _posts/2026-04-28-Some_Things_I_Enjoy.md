@@ -33,7 +33,7 @@ My favorite movie of all time is <a href="https://youtu.be/iUB-sCiZIUw?si=FAu7b-
 
 ## Listening
 
-I LOVE music. I love love love it. Music is one of the greatest inventions ever. Sometimes I think about the invention of musical instruments and my heart warms a little bit. I mean, we created these intricate little machines purely for the enjoyment of it. Then, we created sentences about or lives or poems for people we loved and sang those words while playing our little machines. Humans are pretty great if you really sit and think about it. Anyway, some of my favorite songs currently are as follows:
+I LOVE music. I love love love it. Music is one of the greatest inventions ever. Sometimes I think about the invention of musical instruments and my heart warms a little bit. I mean, we created these intricate little machines purely for the enjoyment of it. Then, we created sentences about our lives or poems for people we loved and sang those words while playing our little machines. Humans are pretty great if you really sit and think about it. Anyway, some of my favorite songs currently are as follows:
 
 <a href="https://youtu.be/IXNlhYFRIGc?si=1qI_TvBjz1NICaPe"><u>Jump Rope Gazers</u></a> by The Beths
 
