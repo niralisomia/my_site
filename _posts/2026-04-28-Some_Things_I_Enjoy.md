@@ -3,6 +3,7 @@ layout: post
 comments: true
 title: Some Things I Enjoy
 categories: [Misc]
+private: true
 ---
 
 This post is a little corner of my internet home for things that I've read, watched, or listened to that I keep coming back to :)
