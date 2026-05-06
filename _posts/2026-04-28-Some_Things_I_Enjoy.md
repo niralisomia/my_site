@@ -6,11 +6,13 @@ categories: [Misc]
 private: true
 ---
 
-This post is a little corner of my internet home for things that I've read, watched, or listened to that I keep coming back to :)
+Hi! If you're here it means you read my "about" page and clicked on the link at the very bottom. This page is more for me than anything. I update it occasionally when I find something new I resonate with, but for the most part, the media I love stays fairly consistent. For some reason, I like having some documentation of it. Anyway, I hope something you find here touches you as it did me :) 
 
 ## Reading
 
 When I have time and aren't working on lab related things, I really enjoy reading. I love that James Baldwin quote “You think your pain and your heartbreak are unprecedented in the history of the world, but then you read. It was books that taught me that the things that tormented me most were the very things that connected me with all the people who were alive, who had ever been alive.” Reading is a reminder that we're not all alone on this little spinning orb.
+
+I specifically really enjoy poetry. "Stanza" actually originates from the italian word for "room" or "stopping place". I love this fact. It makes sense to me, that a poem is a place. It's a space we can dwell in, a room of respite. 
 
 Some of my favorite poems are:
 
@@ -30,7 +32,7 @@ When I was in college I made a website of all my favorite poems so I could go ba
 
 ## Watching
 
-My favorite movie of all time is <a href="https://youtu.be/iUB-sCiZIUw?si=FAu7b-IslHBNUHoR"><u>About Time</u></a> which stars Domhnall Gleeson and Rachel McAdams. It's the movie I watch when I'm feeling down, and it reminds me that life should be savored. There's an interview with Joan Didion in which the interviewer says "There's a certain esthetic to the way you live. You once talked about using good silver every day" to which Didion responds "Well, every day is all there is." Life moves quickly and we all tend to get caught up in the little nuisances of our days. Sometimes it's nice to be reminded that our lives are made up of days and so, to truly enjoy our lives, we must make it a point to enjoy our days. If you need a reminder of that, or just want a good laugh followed by a good cry, please go watch this movie! And then please send me an email and tell me what you thought of it :)
+My favorite movie of all time is <a href="https://youtu.be/iUB-sCiZIUw?si=FAu7b-IslHBNUHoR"><u>About Time</u></a> which stars Domhnall Gleeson and Rachel McAdams. It's the movie I watch when I'm feeling down, and it reminds me that life should be savored. There's an interview with Joan Didion in which the interviewer says "There's a certain esthetic to the way you live. You once talked about using good silver every day" to which Didion responds "Well, every day is all there is." Life moves quickly and we all tend to get caught up in the little nuisances. Sometimes it's nice to be reminded that our lives are made up of days and so, to truly enjoy our lives, we must make it a point to enjoy our days. If you need a reminder of that, or just want a good laugh followed by a good cry (and vice versa), please go watch this movie! And then please send me an email and tell me what you thought of it :)
 
 ## Listening
 
@@ -50,4 +52,6 @@ I LOVE music. I love love love it. Music is one of the greatest inventions ever.
 
 ## Why I Share This
 
-I wanted to make space on this site for the parts of life that feed my curiosity and joy outside of science. If you enjoy similar things, have any recommendations for things I'd like, or just want to grab a coffee with me you should send me an email at <a href="mailto:nsomia@mit.edu"><u>nsomia@mit.edu</u></a> :)
+I wanted to make space on this site for the parts of life that feed my curiosity and joy outside of science. One of my favorite Ocean Vuong quotes goes “Is that what art is? To be touched thinking what we feel is ours when, in the end, it was someone else, in longing, who finds us?” How beautiful is it that there's so much art in the world? There's so many ways to find and be found. Through art we get to hold each other, over and over again. 
+
+If you enjoy similar things, have any recommendations for things I'd like, or just want to grab a coffee with me you should send me an email at <a href="mailto:nsomia@mit.edu"><u>nsomia@mit.edu</u></a> :)
