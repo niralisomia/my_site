@@ -1,3 +1,14 @@
+// FONT HISTORY:
+// Previous font: browser default (no font-family was set — browsers typically render this as serif, e.g. Times New Roman)
+// To revert: remove the font-family line from body below and delete the @font-face block
+
+@font-face {
+  font-family: 'Handwriting';
+  src: url('/assets/fonts/Handwriting-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @mixin mediaQuery($point) {
   @if $point == phone-width {
     @media (max-width: 480px) {
@@ -22,6 +33,7 @@ body {
   color: var(--primary-text-color);
   transition: background 0.1s ease-in, color 0.1s ease-in;
   // font-size: 120%;
+  font-family: 'Handwriting', serif;
 }
 /* Full-viewport doodle layer on the home page; pointer-events none keeps links clickable. */
 .landing-draw-canvas {
