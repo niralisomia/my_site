@@ -34,6 +34,8 @@ body {
   transition: background 0.1s ease-in, color 0.1s ease-in;
   // font-size: 120%;
   font-family: 'Handwriting', serif;
+  font-size: 112%;
+  word-spacing: 0.1em;
 }
 /* Full-viewport doodle layer on the home page; pointer-events none keeps links clickable. */
 .landing-draw-canvas {
