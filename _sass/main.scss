@@ -45,6 +45,8 @@ body {
     background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow: hidden;
+    height: 100vh;
   }
 }
 /* Full-viewport doodle layer on the home page; pointer-events none keeps links clickable. */

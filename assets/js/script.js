@@ -115,14 +115,23 @@ function changeTheme(htmlElement, bodyElement, theme, themeName) {
     console.log('Applied styles - backgroundImage:', bodyElement.style.backgroundImage);
     console.log('Computed background-image:', window.getComputedStyle(bodyElement).backgroundImage);
   } else if (theme['background-image'] && isMobilePortrait()) {
-    // Theme has background image but we're on mobile portrait - use background color only
-    bodyElement.style.backgroundImage = 'none';
-    bodyElement.style.backgroundSize = '';
-    bodyElement.style.backgroundPosition = '';
-    bodyElement.style.backgroundRepeat = '';
-    bodyElement.style.backgroundAttachment = '';
-    bodyElement.style.removeProperty('background-color');
-    console.log('Mobile portrait detected - background image hidden');
+    if (bodyElement.classList.contains('page-home')) {
+      // Let CSS media query handle Phone_background.jpg on the home page
+      bodyElement.style.removeProperty('background-image');
+      bodyElement.style.removeProperty('background-size');
+      bodyElement.style.removeProperty('background-position');
+      bodyElement.style.removeProperty('background-repeat');
+      bodyElement.style.removeProperty('background-attachment');
+      bodyElement.style.removeProperty('background-color');
+    } else {
+      // Non-home pages in portrait: use bare background color only
+      bodyElement.style.backgroundImage = 'none';
+      bodyElement.style.backgroundSize = '';
+      bodyElement.style.backgroundPosition = '';
+      bodyElement.style.backgroundRepeat = '';
+      bodyElement.style.backgroundAttachment = '';
+      bodyElement.style.removeProperty('background-color');
+    }
   } else {
     // No background image, so use the background color from CSS variable
     bodyElement.style.backgroundImage = 'none';
