@@ -43,7 +43,7 @@
     {% seo %}
 
   </head>
-    <body onload="onLoad()">
+    <body onload="onLoad()"{% if page.layout == 'home' %} class="page-home"{% endif %}>
       {{ content }}
     </body>
 </html>

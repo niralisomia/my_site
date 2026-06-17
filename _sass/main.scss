@@ -39,8 +39,8 @@ body {
 }
 
 @media (max-width: 480px) and (orientation: portrait) {
-  body {
-    background-image: url('/images/Phone_background_cropped.jpg');
+  body.page-home {
+    background-image: url('/images/Phone_background.jpg');
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
