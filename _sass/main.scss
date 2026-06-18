@@ -340,6 +340,32 @@ body {
 }
 
 
+  // About page contact section
+  .about-contact-section {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .contact-list {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      li a {
+        color: var(--primary-text-color);
+        text-decoration: none;
+        border-bottom: 1px solid var(--primary-text-color);
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
   //custom md tags styles
   div.highlight {
     background: var(--primary-highlight-color);

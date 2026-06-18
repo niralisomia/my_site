@@ -5,7 +5,7 @@ permalink: /about/
 ---
 <div class="about-profile-container">
   <div class="profile-image-wrapper">
-    <img src="{{ '/images/profile_image.jpg' | relative_url }}" alt="Nirali Somia">
+    <img src="{{ '/images/Polaroid.jpg' | relative_url }}" alt="Nirali Somia">
   </div>
   <div class="profile-text">
     <p>Hi! My name is Nirali Somia and I'm currently a first year PhD student in the Medical Engineering and Medical Physics (<a href="https://hst.mit.edu/academic-programs/memp"><u>MEMP</u></a>) program through Health Sciences and Technology (HST) at Harvard and MIT. I am coadvised by <a href="https://lotterlab.github.io/"><u>Dr. Bill Lotter</u></a> and <a href="https://zaklab.org/"><u>Dr. Isaac Kohane</u></a>. I'm currently interested in AI interpretability, evaluation, and alignment in healthcare.</p>
@@ -18,6 +18,16 @@ permalink: /about/
 
 
   </div>
+</div>
+
+<div class="about-contact-section">
+  <h2>Contact</h2>
+  <ul class="contact-list">
+    <li><a href="https://www.linkedin.com/in/nirali-somia-b0073325a" target="_blank" rel="noopener">LinkedIn</a></li>
+    <li><a href="mailto:nsomia@mit.edu">nsomia@mit.edu</a></li>
+    <li><a href="https://bsky.app/profile/niralisomia.bsky.social" target="_blank" rel="noopener">Bluesky</a></li>
+    <li><a href="https://scholar.google.com/citations?hl=en&user=rESzlpMAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+  </ul>
 </div>
 
 <!--
