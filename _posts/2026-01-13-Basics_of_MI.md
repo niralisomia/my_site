@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: The Basics of Mechanistic Interpretability
 categories: [Concepts]
-private: true
+private: false
 ---
 
 Hi! Welcome to my first blog post ever! Something I've found particularly interesting in AI recently is Mechanistic Interpretability. This was a concept many people in my postbacc lab were familiar with. We had a reading group on it and a hackathon exploring sparse autoencoders. I found it incredibly intriguing and knew I'd come back to it eventually. However, last year was the first time I was truly exposed to deep learning as a field. I was struggling to understand the intricacies of simple Convolutional Neural Networks, let alone grasp how to extract evidence that these models learn interpretable concepts.
