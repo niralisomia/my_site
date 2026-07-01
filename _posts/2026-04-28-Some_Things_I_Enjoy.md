@@ -6,7 +6,7 @@ categories: [Misc]
 private: false
 ---
 
-Hi! If you're here it means you read my "about" page and clicked on the link at the very bottom. This page is more for me than anything. I update it occasionally when I find something new I resonate with, but for the most part, the art I love stays fairly consistent. Anyway, I hope something you find here touches you as it did me :) 
+Hi! This is just a little page about some things I enjoy reading, watching, and listening to. I update it occasionally when I find something new I resonate with, but for the most part, the art I love stays fairly consistent. Anyway, I hope something you find here touches you as it did me :) 
 
 ## Reading
 
